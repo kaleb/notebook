@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  jupyter-lab:
+    build: ./services/jupyter-lab
+    ports:
+    - "10000:8888"
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    volumes:
+    - ./test-data:/home/jovyan/workspace
