@@ -7,8 +7,12 @@
             "label": "Up",
             "type": "shell",
             "command": "docker-compose",
-            "args": ["up"],
+            "args": [
+                "up"
+            ],
             "group": "build",
+            "isBackground": true,
+            "problemMatcher": [],
         }
     ]
 }
