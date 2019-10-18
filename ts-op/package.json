@@ -1,0 +1,22 @@
+{
+  "name": "ts-op",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"./test/**/*.spec.ts\""
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.11.3",
+    "better-assert": "^1.0.2",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1"
+  }
+}
