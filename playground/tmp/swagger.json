@@ -1,0 +1,110 @@
+{
+	"basePath": "/api",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {
+		"UserModel": {
+			"properties": {},
+			"type": "object"
+		}
+	},
+	"info": {
+		"title": "@kaleb/playground",
+		"version": "0.0.0",
+		"license": {
+			"name": "ISC"
+		}
+	},
+	"paths": {
+		"/users": {
+			"get": {
+				"operationId": "Index",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"post": {
+				"operationId": "Create",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/users/{id}": {
+			"get": {
+				"operationId": "Show",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"$ref": "#/definitions/UserModel"
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"put": {
+				"operationId": "Update",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
+			"delete": {
+				"operationId": "Destroy",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {
+		"jwt": {
+			"type": "oauth2",
+			"flow": "accessCode",
+			"authorizationUrl": "https://example.com/oauth/authorize",
+			"tokenUrl": "https://example.com/oauth/token",
+			"scopes": {
+				"view:conversation": "Grants read access",
+				"create:conversation": "Grants write access",
+				"edit:conversation": "Grants write access"
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+    "swagger": {
+        "basePath": "api",
+        "entryFile": "./tsoa-test.ts",
+        "outputDirectory": "./tmp",
+        "securityDefinitions" : {
+            "jwt": {
+                "type": "oauth2",
+                "flow": "accessCode",
+                "authorizationUrl": "https://example.com/oauth/authorize",
+                "tokenUrl": "https://example.com/oauth/token",
+                "scopes": {
+                    "view:conversation": "Grants read access",
+                    "create:conversation": "Grants write access",
+                    "edit:conversation": "Grants write access"
+                }
+            }
+        }
+    },
+    "routes": {
+        "basePath": "api",
+        "entryFile": "./tsoa-test.ts",
+        "routesDir": "./tmp",
+        "middlewareTemplate": "./scripts/handler.ts.mustache"
+    },
+    "ignore": [
+        "**/node_modules/@types/bson/**"
+    ]
+}
